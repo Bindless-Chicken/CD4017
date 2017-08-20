@@ -8,7 +8,7 @@ services:
 before_install:
   - sudo apt-get update -qq
   - docker pull ubuntu:artful
-  - docker run -it -d --name build user/build bash
+  - docker run -it -d --name build ubuntu:artful bash
   - docker exec build git clone https://github.com/Lord-Nazdar/CD4017
   - docker exec build sudo apt-get install gcc-avr binutils-avr avr-libc
 
