@@ -38,7 +38,7 @@ int function_main(void)
 int main(void)
 #endif // !
 {
-	DDRA = 0x00;
+	// DDRA = 0x00;
 	DDRB = 0xFE;
 	DDRD = 0x07;
 
