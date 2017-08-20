@@ -77,6 +77,9 @@ TEST_CASE("Check the chip initialization", "[function_main]") {
 }
 
 TEST_CASE("Test shifting", "[PCINT0_vect]") {
+	CHECK(PORTB == 0b00000010);
+	CHECK(PORTD == 0b00000000);
+	for(uint8_t i=0; i< )
 	PCINT0_vect();
 	CHECK(PORTB == 0x04);
 	PCINT0_vect();

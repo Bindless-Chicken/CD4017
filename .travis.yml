@@ -1,11 +1,10 @@
-language: cpp
-compiler:
-  - gcc
-  - clang
+language: c
+
+before_install:
+  - sudo apt-get update -qq
+install:
+  - sudo apt-get install -qq gcc-avr binutils-avr avr-libc
 
 script:
-  - mkdir build
-  - cd build/
-  - cmake ..
+  - cmake
   - make
-  - ./CD4017-Unit
