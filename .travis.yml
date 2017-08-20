@@ -3,8 +3,11 @@ language: c
 before_install:
   - sudo apt-get update -qq
 install:
+  - sudo apt-get install zlib1g
+  - wget http://mirrors.kernel.org/ubuntu/pool/universe/b/binutils-avr/binutils-avr_2.26.20160125+Atmel3.6.0-1_amd64.deb
+  - wget http://mirrors.kernel.org/ubuntu/pool/universe/g/gcc-avr/gcc-avr_5.4.0+Atmel3.6.0-1_amd64.deb
   - wget http://mirrors.kernel.org/ubuntu/pool/universe/a/avr-libc/avr-libc_2.0.0+Atmel3.6.0-1_all.deb
-  - sudo dpkg -i avr-libc_2.0.0+Atmel3.6.0-1_all.deb
+  - sudo dpkg -i binutils-avr_2.26.20160125+Atmel3.6.0-1_amd64.deb gcc-avr_5.4.0+Atmel3.6.0-1_amd64.deb avr-libc_2.0.0+Atmel3.6.0-1_all.deb
   - sudo apt-get install -f
   # - sudo apt-get install -qq gcc-avr binutils-avr avr-libc
 
